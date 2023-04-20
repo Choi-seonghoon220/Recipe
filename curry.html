@@ -3,9 +3,32 @@
     <head>
         <title>레시피</title>
         <meta charset="utf-8">
+        <style>
+            .food {
+                font-weight: bold;
+                color:red;
+            }
+            #first {
+                color: green;
+            }
+        </style>
     </head>
     <body>
         <h1><a href="index.html">레시피</a></h1>
+        <input type="button" value="night" onclick="
+            var target = document.querySelector('body');
+            if (this.value === 'night') {
+                this.value = 'day';
+
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+            } else {
+                this.value = 'night';
+
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+            }
+        ">
         <ul>
             <li><a href="curry.html">카레</a></li>
             <li><a href="Scallion_Stir-Fry.html">대파 제육볶음</a></li>
@@ -19,22 +42,22 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/LTVxirHWvh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </p>
 
-        <strong><u>식용유</u> 1/4컵(35g)</strong> 넣고 돼지 비계부분 먼저 볶기
-        <br>노릇노릇 튀겨지듯이 익으면 살코기(300g)넣고 볶기
+        <span class="food">식용유 1/4컵(35g)</span> 넣고 <span id=first class="food">돼지 비계</span>부분 먼저 볶기
+        <br>노릇노릇 튀겨지듯이 익으면 <span class="food">살코기(300g)</span>넣고 볶기
         <br>-기름에 거의 튀기듯이해서 풍미가 좋아진다.
-        <br>갈색 가까울 때 양파 2개(하나 더 넣어도 됨)(500g) 넣기
+        <br>갈색 가까울 때 <span class="food">양파 2개(하나 더 넣어도 됨)(500g)</span> 넣기
         <br>-센불에 물이 안 나오도록 볶기
         <br>-양파를 카라멜라이징하면 좋은데 그건 에너지소모가 많이 든다.
-        <br>양파가 갈색 비슷하게 나오면 당근 1/4개(67g)
-        <br>진간장 2큰술(20g) 팬 가장자리쪽으로
+        <br>양파가 갈색 비슷하게 나오면 <span class="food">당근 1/4개(67g)</span>
+        <br><span class="food">진간장 2큰술(20g)</span> 팬 가장자리쪽으로
         <br>-끓여주는 것
-        <br>케첩 2큰술(3,4큰술도 넣어도 됨)(40g)
+        <br><span class="food">케첩 2큰술(3,4큰술도 넣어도 됨)(40g)</span>
         <br>-볶아서 새콤한 맛을 날린다
-        <br>잘못면 눌겠다 싶을 때 물10컵(1.8L)
+        <br>잘못면 눌겠다 싶을 때 <span class="food">물10컵(1.8L)</span>
         <br>-물은 날라갈 것까지 계산한 양
         <br>15분 이상 끓여주기
-        <br>카레가루 상황에 맞춰가며 넣어주기
-        <br>마지막에 버터2큰술 (20g)
+        <br><span class="food">카레가루</span> 상황에 맞춰가며 넣어주기
+        <br>마지막에 <span class="food">버터2큰술(20g)</span>
 
         <img src="curry.jpg" width="100%">
     </body>
