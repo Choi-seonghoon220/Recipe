@@ -3,23 +3,13 @@
     <head>
         <title>레시피</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="subList.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="colors.js"></script>
     </head>
     <body>
         <h1><a href="index.html">레시피</a></h1>
-        <input type="button" value="night" onclick="
-            var target = document.querySelector('body');
-            if (this.value === 'night') {
-                this.value = 'day';
-
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-            } else {
-                this.value = 'night';
-
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-            }
-        ">
+        <input type="button" value="night" onClick="nightDayHandler(this);">
         <ul>
             <li><a href="curry.html">카레</a></li>
             <li><a href="Scallion_Stir-Fry.html">대파 제육볶음</a></li>
@@ -33,20 +23,24 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/gqrBngRMEPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </p>
 
-        <br>닭 1kg 손질하고 칼집
-        <br>양념장
-        <br>양조간장 5스푼(40g)
-        <br>흑설탕 2스푼(30g)
-        <br>물엿 3스푼(40g)
-        <br>굴소스 1스푼(18g)
-        <br>다진 마늘 1스푼(22g)
-        <br>맛술 1/2컵(100ml)
-        <br>후추가루 3꼬집
-        <br>팬에 참기름 2스푼
-        <br>닭고기 굽고 꺼낸 뒤 기름 닦기
-        <br>양념 붓고 끓으면 닭고기 넣기
-        <br>양념이 자박해지면 청양고추, 홍고추 넣기
-        <br>다 볶으면 통깨 1스푼
+        <ol>
+            <li><span class="food">닭 1kg</span> 손질하고 칼집
+            <li>양념장
+            <ol>
+                <li><span class="food">양조간장 5스푼(40g)</span>
+                <li><span class="food">흑설탕 2스푼(30g)</span>
+                <li><span class="food">물엿 3스푼(40g)</span>
+                <li><span class="food">굴소스 1스푼(18g)</span>
+                <li><span class="food">다진 마늘 1스푼(22g)</span>
+                <li><span class="food">맛술 1/2컵(100ml)</span>
+                <li><span class="food">후추가루 3꼬집</span>
+            </ol>
+            <li>팬에 <span class="food">참기름 2스푼</span>
+            <li>닭고기 굽고 꺼낸 뒤 기름 닦기
+            <li>양념 붓고 끓으면 닭고기 넣기
+            <li>양념이 자박해지면 <span class="food">청양고추, 홍고추</span> 넣기
+            <li>다 볶으면 <span class="food">통깨 1스푼</span>
+        </ol>
 
 
 

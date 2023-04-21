@@ -3,23 +3,13 @@
     <head>
         <title>레시피</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="subList.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="colors.js"></script>
     </head>
     <body>
         <h1><a href="index.html">레시피</a></h1>
-        <input type="button" value="night" onclick="
-            var target = document.querySelector('body');
-            if (this.value === 'night') {
-                this.value = 'day';
-
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-            } else {
-                this.value = 'night';
-
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-            }
-        ">
+        <input type="button" value="night" onClick="nightDayHandler(this);">
         <ul>
             <li><a href="curry.html">카레</a></li>
             <li><a href="Scallion_Stir-Fry.html">대파 제육볶음</a></li>

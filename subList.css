@@ -1,0 +1,11 @@
+.food {
+    font-weight: bold;
+    color: coral;
+}
+#first {
+    color: green;
+}
+
+.subList {
+    list-style-type: '\2d';
+}

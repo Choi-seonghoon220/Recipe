@@ -4,61 +4,81 @@
         <title>레시피</title>
         <meta charset="utf-8">
         <style>
-            .food {
-                font-weight: bold;
-                color:red;
-            }
-            #first {
-                color: green;
-            }
+            /*.food {*/
+            /*    font-weight: bold;*/
+            /*    color:red;*/
+            /*}*/
+            /*#first {*/
+            /*    color: green;*/
+            /*}*/
+            /*.subList {*/
+            /*    list-style-type: '\2d';*/
+            /*}*/
         </style>
+        <link rel="stylesheet" type="text/css" href="subList.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="colors.js"></script>
     </head>
     <body>
-        <h1><a href="index.html">레시피</a></h1>
-        <input type="button" value="night" onclick="
-            var target = document.querySelector('body');
-            if (this.value === 'night') {
-                this.value = 'day';
-
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-            } else {
-                this.value = 'night';
-
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-            }
-        ">
-        <ul>
-            <li><a href="curry.html">카레</a></li>
-            <li><a href="Scallion_Stir-Fry.html">대파 제육볶음</a></li>
-            <li><a href="Grilled_Chicken_in_Soy_Sauce.html">간장 닭 구이</a></li>
-        </ul>
+        <h1 style="text-align: center;"><a href="index.html">레시피</a></h1>
+        <input type="button" value="night" onClick="nightDayHandler(this);">
+        <section>
+            <ul>
+                <li><a href="curry.html">카레</a></li>
+                <li><a href="Scallion_Stir-Fry.html">대파 제육볶음</a></li>
+                <li><a href="Grilled_Chicken_in_Soy_Sauce.html">간장 닭 구이</a></li>
+            </ul>
+        </section>
 
 
-        <h2><a href="https://youtu.be/LTVxirHWvh8" target="_blank" title="백종원 카레 유튜브">카레</a></h2>
+        <h2>카레</h2>
         
         <p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/LTVxirHWvh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </p>
 
-        <span class="food">식용유 1/4컵(35g)</span> 넣고 <span id=first class="food">돼지 비계</span>부분 먼저 볶기
-        <br>노릇노릇 튀겨지듯이 익으면 <span class="food">살코기(300g)</span>넣고 볶기
-        <br>-기름에 거의 튀기듯이해서 풍미가 좋아진다.
-        <br>갈색 가까울 때 <span class="food">양파 2개(하나 더 넣어도 됨)(500g)</span> 넣기
-        <br>-센불에 물이 안 나오도록 볶기
-        <br>-양파를 카라멜라이징하면 좋은데 그건 에너지소모가 많이 든다.
-        <br>양파가 갈색 비슷하게 나오면 <span class="food">당근 1/4개(67g)</span>
-        <br><span class="food">진간장 2큰술(20g)</span> 팬 가장자리쪽으로
-        <br>-끓여주는 것
-        <br><span class="food">케첩 2큰술(3,4큰술도 넣어도 됨)(40g)</span>
-        <br>-볶아서 새콤한 맛을 날린다
-        <br>잘못면 눌겠다 싶을 때 <span class="food">물10컵(1.8L)</span>
-        <br>-물은 날라갈 것까지 계산한 양
-        <br>15분 이상 끓여주기
-        <br><span class="food">카레가루</span> 상황에 맞춰가며 넣어주기
-        <br>마지막에 <span class="food">버터2큰술(20g)</span>
+        <h3>재료</h3>
+        <ul>
+            <li>식용유 1/4컵(35g)</li>
+            <li>살코기(300g)</li>
+            <li>양파 2개(하나 더 넣어도 됨)(500g)</li>
+            <li>당근 1/4개(67g)</li>
+            <li>카레가루</li>
+            <li>버터2큰술(20g)</li>
+            <li>진간장 2큰술(20g)</li>
+            <li>케첩 2큰술(3,4큰술도 넣어도 됨)(40g)</li>
+            <li>물10컵(1.8L)</li>
+        </ul>
 
+        <h3>요리시작</h3>
+        <ol>
+            <li><span class="food">식용유 1/4컵(35g)</span> 넣고 <span class="food">돼지 비계</span>부분 먼저 볶기</li>
+            <li>노릇노릇 튀겨지듯이 익으면 <span class="food">살코기(300g)</span>넣고 볶기</li>
+            <ul span class="subList">
+                <li>기름에 거의 튀기듯이해서 풍미가 좋아진다.</li>
+            </ul>
+            <li>갈색 가까울 때 <span class="food">양파 2개(하나 더 넣어도 됨)(500g)</span> 넣기</li>
+            <ul span class="subList">
+                <li>센불에 물이 안 나오도록 볶기</li>
+                <li>양파를 카라멜라이징하면 좋은데 그건 에너지소모가 많이 든다.</li>
+            </ul>
+
+            <li>양파가 갈색 비슷하게 나오면 <span class="food">당근 1/4개(67g)</span></li>
+            <li><span class="food">진간장 2큰술(20g)</span> 팬 가장자리쪽으로 끓여주는 것</li>
+            <li><span class="food">케첩 2큰술(3,4큰술도 넣어도 됨)(40g)</span></li>
+            <ul span class="subList">
+                <li>볶아서 새콤한 맛을 날린다</li>
+            </ul>
+            <li>잘못면 눌겠다 싶을 때 <span class="food">물10컵(1.8L)</span></li>
+            <ul span class="subList">
+                <li>물은 날라갈 것까지 계산한 양</li>
+            </ul>
+            <li>15분 이상 끓여주기</li>
+            <li><span class="food">카레가루</span> 상황에 맞춰가며 넣어주기</li>
+            <li>마지막에 <span class="food">버터2큰술(20g)</span></li>
+        </ol>
         <img src="curry.jpg" width="100%">
+
+
     </body>
 </html>
